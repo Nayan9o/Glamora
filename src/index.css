@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Glamora Design System — Soft pastel beauty */
+@layer base {
+  :root {
+    /* Core surfaces */
+    --background: 30 40% 99%;          /* warm white */
+    --foreground: 340 20% 18%;         /* deep plum-brown */
+
+    --card: 0 0% 100%;
+    --card-foreground: 340 20% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 340 20% 18%;
+
+    /* Brand: blush pink */
+    --primary: 345 65% 65%;            /* rose pink */
+    --primary-foreground: 0 0% 100%;
+    --primary-glow: 345 80% 78%;
+
+    /* Nude / champagne */
+    --secondary: 25 45% 92%;
+    --secondary-foreground: 340 25% 25%;
+
+    --muted: 340 20% 96%;
+    --muted-foreground: 340 10% 45%;
+
+    --accent: 35 60% 75%;              /* champagne gold */
+    --accent-foreground: 340 25% 20%;
+
+    --blush: 350 90% 94%;              /* very light pink */
+    --blush-foreground: 340 25% 25%;
+
+    --destructive: 0 70% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 340 25% 92%;
+    --input: 340 25% 92%;
+    --ring: 345 65% 65%;
+
+    --radius: 1rem;
+
+    /* Gradients */
+    --gradient-soft: linear-gradient(135deg, hsl(350 90% 96%), hsl(25 60% 95%));
+    --gradient-primary: linear-gradient(135deg, hsl(345 70% 70%), hsl(345 80% 82%));
+    --gradient-hero: linear-gradient(120deg, hsl(350 90% 96% / 0.7), hsl(25 60% 94% / 0.4));
+
+    /* Shadows */
+    --shadow-soft: 0 8px 30px -12px hsl(345 50% 70% / 0.25);
+    --shadow-glow: 0 20px 60px -20px hsl(345 70% 70% / 0.4);
+    --shadow-card: 0 4px 20px -8px hsl(340 30% 60% / 0.15);
+
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 340 20% 8%;
+    --foreground: 30 40% 96%;
+    --card: 340 20% 10%;
+    --card-foreground: 30 40% 96%;
+    --popover: 340 20% 10%;
+    --popover-foreground: 30 40% 96%;
+    --primary: 345 65% 65%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 340 15% 18%;
+    --secondary-foreground: 30 40% 96%;
+    --muted: 340 15% 16%;
+    --muted-foreground: 30 20% 70%;
+    --accent: 35 60% 65%;
+    --accent-foreground: 340 25% 15%;
+    --blush: 345 30% 20%;
+    --blush-foreground: 30 40% 96%;
+    --destructive: 0 70% 50%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 340 15% 20%;
+    --input: 340 15% 20%;
+    --ring: 345 65% 65%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv02";
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif tracking-tight;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-soft { background: var(--gradient-soft); }
+  .bg-gradient-primary { background: var(--gradient-primary); }
+  .bg-gradient-hero { background: var(--gradient-hero); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .transition-smooth { transition: var(--transition-smooth); }
+  .text-balance { text-wrap: balance; }
+}
